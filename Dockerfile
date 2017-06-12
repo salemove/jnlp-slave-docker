@@ -49,4 +49,6 @@ RUN set -ex; \
 
 COPY docker-entrypoint.sh /usr/local/bin/
 
+USER jenkins
+
 ENTRYPOINT ["docker-entrypoint.sh", "jenkins-slave"]
