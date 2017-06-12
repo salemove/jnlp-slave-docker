@@ -49,7 +49,8 @@ RUN set -ex; \
 	docker -v
 
 COPY docker-entrypoint.sh /usr/local/bin/
+COPY chown-docker-sock.sh /usr/local/bin/
 
 USER jenkins
 
-ENTRYPOINT ["docker-entrypoint.sh", "jenkins-slave"]
+ENTRYPOINT ["docker-entrypoint.sh", "chown-docker-sock.sh", "jenkins-slave"]
