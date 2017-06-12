@@ -49,6 +49,5 @@ RUN set -ex; \
 	docker -v
 
 COPY docker-entrypoint.sh /usr/local/bin/
-COPY chown-docker-sock.sh /usr/local/bin/
 
 ENTRYPOINT ["docker-entrypoint.sh", "jenkins-slave"]
